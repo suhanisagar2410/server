@@ -1,0 +1,67 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist# env/secrets
+.env
+.env.*
+*.pem
+*.key
+*.crt
+
+# dependencies
+node_modules/
+
+# builds & caches
+dist/
+build/
+coverage/
+.nyc_output/
+.cache/
+.turbo/
+.next/
+parcel-cache/
+.pnpm-store/
+
+# IDE/editor
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# logs
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# python backend (if present)
+*.pyc
+__pycache__/
+.python-version
+.venv/
+.envrc
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
