@@ -1,0 +1,37 @@
+import mongoose from 'mongoose';
+
+const contactSchema = new mongoose.Schema(
+  {
+    name: {
+      type: String,
+      required: [true, 'Please provide a name'],
+      trim: true,
+      minlength: [2, 'Name must be at least 2 characters'],
+    },
+    email: {
+      type: String,
+      required: [true, 'Please provide an email'],
+      trim: true,
+      lowercase: true,
+      match: [
+        /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+        'Please provide a valid email address',
+      ],
+    },
+    message: {
+      type: String,
+      required: [true, 'Please provide a message'],
+      minlength: [10, 'Message must be at least 10 characters'],
+    },
+    status: {
+      type: String,
+      enum: ['new', 'read', 'replied'],
+      default: 'new',
+    },
+  },
+  {
+    timestamps: true,
+  }
+);
+
+export default mongoose.model('Contact', contactSchema);
